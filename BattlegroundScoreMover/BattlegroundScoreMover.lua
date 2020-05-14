@@ -8,12 +8,15 @@ function BSM:Initialize()
 end
 
 function BSM.OnAddonLoaded(event, addonName)
+    d("BSM loading test")
     if addonName == BSM.name then
         BSM:Initialize()
+        EVENT_MANAGER:UnregisterForEvent(BSM.name, EVENT_ADDON_ON_LOADED)
     end
 end
 
 function BSM.OnPlayerCombatState(event, inCombat)
+    d("Combat: " ..tostring(inCombat))
     if inCombat ~= BSM.inCombat then
         BSM.inCombat = inCombat
 
