@@ -1,2 +1,6 @@
 ## Title: Battleground Score Mover
+## Description: A simple addon to move the battleground score frame
+## Author: Voodoom
 ## APIVersion: 100030
+
+BattlegroundScoreMover.lua
